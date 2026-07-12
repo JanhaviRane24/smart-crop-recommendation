@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles/Navbar.css";
+import "../styles/NavBar.css";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
 
