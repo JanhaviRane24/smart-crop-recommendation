@@ -7,35 +7,30 @@ export default function Feedback() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const feedback = { name, email, message };
-
-    try {
-      const res = await fetch("http://127.0.0.1:8000/api/feedback/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(feedback),
-      });
-
-      if (res.ok) {
-        setStatus("Feedback submitted successfully!");
-        setName("");
-        setEmail("");
-        setMessage("");
-
-        // Clear the message after 3 seconds
-        setTimeout(() => setStatus(""), 3000);
-      } else {
-        setStatus("Something went wrong!");
-        setTimeout(() => setStatus(""), 3000);
-      }
-    } catch (error) {
-      setStatus("Server error!");
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const feedback = { name, email, message };
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback/`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(feedback),
+    });
+    if (res.ok) {
+      setStatus("Feedback submitted successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
+      setTimeout(() => setStatus(""), 3000);
+    } else {
+      setStatus("Something went wrong!");
       setTimeout(() => setStatus(""), 3000);
     }
-  };
+  } catch (error) {
+    setStatus("Server error!");
+    setTimeout(() => setStatus(""), 3000);
+  }
+};
 
   return (
     <div className="feedback-container">
