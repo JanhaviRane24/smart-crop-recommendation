@@ -34,8 +34,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"  # for collectstatic (prod)
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-shg0-#odc)!mbf8y98-5a3bw4h*ch0t5k5gd(#v_*ndh@iai0=')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.onrender.com']
 
 # Application definition
 
