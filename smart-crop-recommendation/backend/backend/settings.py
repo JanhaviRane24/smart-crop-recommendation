@@ -71,10 +71,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "https://smart-crop-frontend-4fgk.onrender.com",
 ]
-CORS_ALLOW_CREDENTIALS = TrueCORS_ALLOW_HEADERS = list(default_headers) + [
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
     "api-key",
 ]
-
 
 ROOT_URLCONF = 'backend.urls'
 
