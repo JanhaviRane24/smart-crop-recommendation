@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+import { registerUser } from '../api/auth';
 import '../styles/Register.css';
 
 export default function Register() {
@@ -10,11 +10,9 @@ export default function Register() {
     password: '',
     phone: ''
   });
-
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,15 +22,15 @@ export default function Register() {
     e.preventDefault();
     setError('');
     setSuccess('');
-
     try {
-      const res = await axios.post(`${API_URL}/accounts/register/`, formData);
-      setSuccess(res.data.message || "Registration successful");
+      const res = await registerUser(formData);
+      setSuccess(res.message || "Registration successful");
       setTimeout(() => navigate('/login'), 1500);
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed');
     }
   };
+  // ... rest of the file (the return/JSX part) stays exactly the same
 
   return (
     <main className="register-container" aria-labelledby="register-title">
