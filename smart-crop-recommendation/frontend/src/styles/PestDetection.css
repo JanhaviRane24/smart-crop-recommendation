@@ -1,0 +1,134 @@
+/* Wrapper */
+.pest-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin-top: 80px;
+  gap: 25px;
+}
+
+/* Card */
+.pest-card {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e5a2f;
+}
+
+/* File input */
+.file-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #222;
+}
+
+input[type="file"] {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid #cce8dd;
+  border-radius: 8px;
+  background: #f8f8f8;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+input[type="file"]:focus {
+  outline: 3px solid #8fd6b8;
+}
+
+/* Preview */
+.preview-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.preview-img {
+  max-width: 100%;
+  max-height: 260px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* Analyze button */
+.analyze-btn {
+  width: 100%;
+  padding: 12px;
+  background: #196f3d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.analyze-btn:hover {
+  background: #14582f;
+}
+
+.analyze-btn:focus {
+  outline: 3px solid #8fd6b8;
+}
+
+/* Result card */
+.result-card {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+/* Loading & error */
+.loading {
+  margin-top: 10px;
+  color: #333;
+}
+
+.error {
+  margin-top: 10px;
+  background: #ffe0e0;
+  color: #b20000;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .pest-card, .result-card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .title {
+    font-size: 20px;
+  }
+  .analyze-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+  input[type="file"] {
+    padding: 10px;
+  }
+  .preview-img {
+    max-height: 200px;
+  }
+}

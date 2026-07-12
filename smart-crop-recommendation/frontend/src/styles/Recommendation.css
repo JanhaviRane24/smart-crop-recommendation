@@ -1,0 +1,141 @@
+/* Main wrapper */
+.recommend-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+
+/* Card styling */
+.card {
+  width: 720px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e5a2f;
+}
+
+/* Form Group */
+.form-group {
+  margin:20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #222;
+}
+
+.form-group input {
+  width: 90%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #cce8dd;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #1a713b;
+  outline: 3px solid #8fd6b8;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Submit button */
+.submit-btn {
+  background: #1a7a42;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+}
+
+.submit-btn:hover {
+  background: #145c32;
+}
+
+.submit-btn:focus {
+  outline: 3px solid #8fd6b8;
+}
+
+/* Guide link styled like button */
+.guide-link {
+  background: #1e3a8a;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  flex: 1;
+}
+
+.guide-link:hover {
+  background: #162f6a;
+}
+
+.guide-link:focus {
+  outline: 3px solid #8fd6b8;
+}
+
+/* Result Card */
+.result-card {
+  min-height: 300px;
+  text-align: center;
+}
+
+.crop-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.fertilizer {
+  font-size: 18px;
+  color: #333;
+}
+
+.placeholder-text {
+  color: #777;
+  padding-top: 50px;
+  font-size: 16px;
+}
+
+/* Error message */
+.error {
+  color: #b20000;
+  background: #ffe0e0;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 700px) {
+  .card {
+    width: 100%;
+  }
+}

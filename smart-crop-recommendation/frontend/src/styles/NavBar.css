@@ -1,0 +1,126 @@
+/* General Navbar */
+.navbar {
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Logo */
+.nav-left .logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-left .logo:focus {
+  outline: 3px solid #ffb74d;
+  outline-offset: 2px;
+}
+
+/* Main Links */
+.nav-center {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-center li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-center li a:focus,
+.nav-center li a:hover {
+  color: green;
+  outline: 3px solid #ffb74d;
+  outline-offset: 2px;
+}
+
+/* User/Login Buttons */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-right .login-btn,
+.nav-right .register-btn,
+.nav-right .logout-btn {
+  padding: 8px 20px;
+  border: 1px solid green;
+  border-radius: 6px;
+  background: transparent;
+  color:black;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.nav-right .login-btn:focus,
+.nav-right .register-btn:focus,
+.nav-right .logout-btn:focus {
+  outline: 3px solid #ffb74d;
+  outline-offset: 2px;
+}
+
+.nav-right .login-btn:hover,
+.nav-right .register-btn:hover,
+.nav-right .logout-btn:hover {
+  background: green;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Username Styling */
+.username {
+  font-weight: 500;
+  margin-right: 8px;
+  color: #333;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-center,
+  .nav-right {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-center.active,
+  .nav-right.active {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .nav-center li a {
+    padding: 10px 0;
+  }
+}

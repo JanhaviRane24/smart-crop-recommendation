@@ -1,0 +1,113 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 92vh;
+  background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay for WCAG contrast */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* Increased contrast */
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  font-weight: 400;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.45);
+}
+
+/* Button Container */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s ease;
+  border: none;
+}
+
+.btn-green {
+  background: #1a7a42; /* IDS-compliant darker green */
+  color: white;
+}
+
+.btn-green:hover {
+  background: #145c32;
+}
+
+.btn-green:focus,
+.btn-outline:focus {
+  outline: 3px solid #8fd6b8;
+  outline-offset: 3px;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: #222;
+}
+
+/* Signup button positioned directly below content */
+.signup-btn {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,155 @@
+/* Background */
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f7f4;
+  padding: 20px;
+}
+
+/* Card */
+.register-card {
+  background: #fff;
+  width: 380px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Tabs */
+.register-tabs {
+  display: flex;
+  background: #e8f4ec;
+  padding: 5px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.register-tabs button,
+.register-tabs .tab-link {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #1a3d1a;
+}
+
+.register-tabs button.active,
+.register-tabs .tab-link.active {
+  background: #1a5f3f;
+  color: white;
+}
+
+.register-tabs button:focus,
+.register-tabs .tab-link:focus {
+  outline: 3px solid #8fd6b8;
+  outline-offset: 2px;
+}
+
+/* Title */
+.register-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1a5f3f;
+}
+
+/* Form Group */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #cce8dd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #1a5f3f;
+  outline: 3px solid #8fd6b8;
+}
+
+/* Submit Button */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1a5f3f;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-btn:hover {
+  background: #154b30;
+}
+
+.register-btn:focus {
+  outline: 3px solid #8fd6b8;
+}
+
+/* Login Redirect */
+.login-text {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #1a5f3f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-text a:focus {
+  outline: 3px solid #8fd6b8;
+}
+
+/* Alerts */
+.error {
+  background: #ffe0e0;
+  color: #b20000;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.success {
+  background: #d4ffe2;
+  color: #008f47;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+/* Responsive */
+@media (max-width: 420px) {
+  .register-card {
+    width: 100%;
+    padding: 20px;
+  }
+} 

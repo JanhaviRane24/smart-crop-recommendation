@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #1b5e20;
+  --text-color: #111;
+  --bg-color: #fff;
+  --focus-color: #ffb74d;
+}
+
+/* Base styling */
+body {
+  padding-top: 90px; /* space for fixed navbar */
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  color: var(--text-color);
+}
+
+/* App container */
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Main page wrapper */
+.page-wrapper {
+  margin-top: 120px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* Navbar & Footer adjustments */
+.footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo animations (reduced motion support) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card component */
+.card {
+  padding: 2em;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+/* Text readability */
+.read-the-docs {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Focus indicators for all interactive elements */
+a, button {
+  outline: none;
+}
+
+a:focus, button:focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}

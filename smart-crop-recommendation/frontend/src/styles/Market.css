@@ -1,0 +1,108 @@
+/* Layout */
+.market-page {
+  max-width: 900px;
+  margin: 90px auto;
+  padding: 40px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5; /* high contrast background */
+}
+
+/* Headings */
+.market-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b5e20; /* WCAG AA compliant green */
+  margin-bottom: 10px;
+}
+
+.market-subtitle {
+  font-size: 1rem;
+  color: #333; /* high contrast text */
+  margin-bottom: 30px;
+}
+
+/* Card */
+.market-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Hidden headings for screen readers */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; 
+  width: 1px; 
+  overflow: hidden; 
+  clip: rect(1px, 1px, 1px, 1px); 
+  white-space: nowrap;
+}
+
+/* Description */
+.market-description {
+  font-size: 1rem;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.market-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2e7d32; /* WCAG AA contrast compliant */
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.market-btn:hover,
+.market-btn:focus {
+  background-color: #1b5e20;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.3);
+}
+
+/* Focus styles for keyboard navigation */
+.market-btn:focus-visible {
+  outline: 3px solid #ffb74d;
+  outline-offset: 3px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .market-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .market-title {
+    font-size: 1.5rem;
+  }
+
+  .market-btn {
+    width: 100%;
+  }
+}
