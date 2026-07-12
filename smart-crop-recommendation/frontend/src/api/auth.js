@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = import.meta.env.VITE_API_ACCOUNTS; // http://127.0.0.1:8000/accounts
+const BASE_URL = import.meta.env.VITE_API_URL; // http://127.0.0.1:8000/accounts
 
 // Login
 export const loginUser = async ({ username, password }) => {
