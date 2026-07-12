@@ -1,8 +1,7 @@
 import axios from "axios";
 
 // Make sure this URL matches your Django backend route
-const BASE_URL = "http://localhost:8000/api/market";
-
+const BASE_URL = import.meta.env.VITE_API_MARKET;
 export const fetchMarketPrice = async (state, district, market, commodity) => {
   try {
     // Build query params
